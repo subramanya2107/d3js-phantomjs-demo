@@ -22,3 +22,6 @@ make sure not change function name and not remove added scripts.
 
 8: change the "inFile" in inupt data to match the new html.file 
 
+9: For linux users check server.js code line #9 url = 'file:///' + fs.absolute('./'+drawerPayload.inFile); you might have to change
+
+
