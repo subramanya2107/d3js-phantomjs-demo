@@ -4,7 +4,7 @@ d3js-phantomjs-demo
 Sample demo to create png out of d3js charts in server side by using phantomjs server
                 
                 How to Use (For Windows)
-                ===================
+            
                 
 1:Install phantomJS http://attester.ariatemplates.com/usage/phantom.html
 
