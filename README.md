@@ -15,7 +15,7 @@ Sample demo to create png out of d3js charts in server side by using phantomjs s
 5: post data using  "curl -X POST -d @testdata.json -H "Content-Type: application/json" localhost:9494"
 
 6: post data should have "inFile" which specifies the html to load, "outFile" which specifies the name of png
-and data for generating the chart
+,"data" for generating the chart and "returnSvg" is optional set true if you want svg as response
 
 7: so if you want to create new charts just make a copy of sample-chart.html , change the code in chartBuilder function,
 make sure not change function name and not remove added scripts.
