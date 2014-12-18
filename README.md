@@ -20,7 +20,7 @@ Sample demo to create png out of d3js charts in server side by using phantomjs s
 Post Params
 ===================
 6: post data should have "inFile" which specifies the html to load, "outFile" which specifies the name of png
-,"data" for generating the chart and "returnSvg" is optional set true if you want svg as response (Note:this svg will have only inline css)
+,"data" for generating the chart(this will be passed as a parameter to chartBuilder function which is in html  ) and "returnSvg" is optional set true if you want svg as response (Note:this svg will have only inline css)
 
 To Add new charts
 ===================
