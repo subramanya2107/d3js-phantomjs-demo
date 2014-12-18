@@ -13,7 +13,7 @@ page.open(url, function (status) {
 		$("body").click();
 	}, drawerPayload.data);
 	page.render(drawerPayload.outFile);
-    response.statusCode = 200;
+        response.statusCode = 200;
 	response.write(true);
 	response.close();
   });
