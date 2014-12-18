@@ -8,16 +8,30 @@ service = server.listen(port, function (request, response) {
 var drawerPayload = JSON.parse(request.post);
 url = 'file:///' + fs.absolute('./'+drawerPayload.inFile);
 page.open(url, function (status) {
-    page.evaluate(function(data){
-		$("body").on( "click", data, chartBuilder );
-		$("body").click();
-	}, drawerPayload.data);
-	page.render(drawerPayload.outFile);
-        response.statusCode = 200;
-	response.write(true);
+  if(status=="success"){
+		page.evaluate(function(data){
+			$("body").on( "click", data, chartBuilder );
+			$("body").click();
+		}, drawerPayload.data);
+		
+		page.render(drawerPayload.outFile);
+		response.statusCode = 200;
+		response.write(true);
+	}else{
+		response.statusCode = 404;
+		response.write("Not Found"+url);
+	}
 	response.close();
   });
-
+page.onError = function (msg, trace) {
+    console.log(msg);
+    trace.forEach(function(item) {
+        console.log('  ', item.file, ':', item.line);
+    })
+	response.statusCode = 417;
+	response.write("Error : "+msg);
+	response.close();
+}
 });
 if (service) {
 	console.log('Web server running on port ' + port);
