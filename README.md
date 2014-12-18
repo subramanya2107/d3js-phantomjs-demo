@@ -4,6 +4,8 @@ d3js-phantomjs-demo
 Sample demo to create png out of d3js charts in server side by using phantomjs server
                 
                 How to Use (For Windows)
+                ===================
+                
 1:Install phantomJS http://attester.ariatemplates.com/usage/phantom.html
 
 2:Download this project zip and extract
@@ -15,16 +17,21 @@ Sample demo to create png out of d3js charts in server side by using phantomjs s
 5: post data using  "curl -X POST -d @testdata.json -H "Content-Type: application/json" localhost:9494"
 
 
-POST PARAMETERS
+Post Params
 ===================
 6: post data should have "inFile" which specifies the html to load, "outFile" which specifies the name of png
-,"data" for generating the chart and "returnSvg" is optional set true if you want svg as response
+,"data" for generating the chart and "returnSvg" is optional set true if you want svg as response (Note:this svg will have only inline css)
 
+To Add new charts
+===================
 7: so if you want to create new charts just make a copy of sample-chart.html , change the code in chartBuilder function,
 make sure not change function name and not remove added scripts.
 
 8: change the "inFile" in inupt data to match the new html.file 
 
-9: For linux users check server.js code line #9 url = 'file:///' + fs.absolute('./'+drawerPayload.inFile); you might have to change
+
+For linux users
+===================
+9:  check server.js code line #9 url = 'file:///' + fs.absolute('./'+drawerPayload.inFile); you might have to change
 
 
