@@ -21,7 +21,14 @@ Post Params
 ===================
 6: post data should have "inFile" which specifies the html to load, "outFile" which specifies the name of png
 ,"data" for generating the chart(this will be passed as a parameter to chartBuilder function which is in html  ) and "returnSvg" is optional set true if you want svg as response (Note:this svg will have only inline css)
-
+```javascript
+{
+"data":[4, 8, 15, 16, 23, 42],
+"outFile":"chart.png",
+"inFile":"sample-chart.html",
+"returnSvg":true
+}
+```
 To Add new charts
 ===================
 7: so if you want to create new charts just make a copy of sample-chart.html , change the code in chartBuilder function,
