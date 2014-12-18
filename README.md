@@ -27,7 +27,7 @@ To Add new charts
 7: so if you want to create new charts just make a copy of sample-chart.html , change the code in chartBuilder function,
 make sure not change function name and not remove added scripts.
 
-8: change the "inFile" in inupt data to match the new html.file 
+8: change the "inFile" in input data to match the new html.file 
 
 
 For linux users
